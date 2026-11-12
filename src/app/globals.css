@@ -8,31 +8,31 @@
    text-text, text-muted, bg-accent, text-accent-ink, text-accent-text, text-hot.
    ─────────────────────────────────────────────────────────────── */
 :root, [data-theme="dark"] {
-  --bg: #09090d;
-  --surface: #111116;
-  --surface-2: #1a1a21;
-  --line: rgba(255, 255, 255, 0.1);
-  --text: #f4f4f6;
-  --muted: rgba(244, 244, 246, 0.62);
-  --accent: #00ff85;
-  --accent-ink: #09090d;
-  --accent-text: #00ff85;
-  --hot: #ff0055;
-  --glow: rgba(0, 255, 133, 0.4);
+  --bg: #070707;
+  --surface: #101010;
+  --surface-2: #181818;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #e8e6e3;
+  --muted: rgba(232, 230, 227, 0.55);
+  --accent: #a82a30;
+  --accent-ink: #f3eeee;
+  --accent-text: #c9575c;
+  --hot: #b8434a;
+  --glow: rgba(168, 42, 48, 0.08);
   color-scheme: dark;
 }
 [data-theme="light"] {
-  --bg: #f4f4f6;
-  --surface: #ffffff;
-  --surface-2: #ebecf1;
-  --line: rgba(9, 9, 13, 0.12);
-  --text: #09090d;
-  --muted: rgba(9, 9, 13, 0.62);
-  --accent: #00ff85;
-  --accent-ink: #09090d;
-  --accent-text: #007a41;
-  --hot: #e0003f;
-  --glow: rgba(0, 200, 110, 0.35);
+  --bg: #efeded;
+  --surface: #f8f7f6;
+  --surface-2: #e4e2e0;
+  --line: rgba(23, 21, 21, 0.12);
+  --text: #171515;
+  --muted: rgba(23, 21, 21, 0.6);
+  --accent: #9a2229;
+  --accent-ink: #f8f3f3;
+  --accent-text: #8a1d23;
+  --hot: #a3282f;
+  --glow: rgba(154, 34, 41, 0.08);
   color-scheme: light;
 }
 
@@ -64,8 +64,8 @@ button { cursor: pointer; }
 
 .grid-bg { background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 52px 52px; background-position: -1px -1px; }
 .glass { background: color-mix(in srgb, var(--surface) 72%, transparent); border: 1px solid var(--line); backdrop-filter: blur(14px); }
-.glow-accent { box-shadow: 0 0 60px -18px var(--glow); }
-@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(0,255,133,.55); } 100% { box-shadow: 0 0 0 10px rgba(0,255,133,0); } }
+.glow-accent { box-shadow: 0 0 24px -20px var(--glow); }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(168,42,48,.35); } 100% { box-shadow: 0 0 0 10px rgba(168,42,48,0); } }
 .pulse-ring { animation: pulse-ring 1.8s infinite; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }

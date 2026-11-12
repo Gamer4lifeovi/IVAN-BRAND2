@@ -41,7 +41,7 @@ function Result() {
 
 export default function SuccessPage() {
   return (
-    <main className="grid-bg min-h-screen px-5 pb-20">
+    <main className="min-h-screen px-5 pb-20">
       <Navbar />
       <Suspense fallback={null}><Result /></Suspense>
     </main>

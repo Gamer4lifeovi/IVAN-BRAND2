@@ -28,7 +28,7 @@ export default function ProductView({ product: p, related }: { product: Product;
   };
 
   return (
-    <main className="grid-bg min-h-screen pb-20">
+    <main className="min-h-screen pb-20">
       <Navbar />
       <section className="mx-auto max-w-6xl px-5 pt-8 md:px-8">
         <Link href="/shop" className="inline-flex items-center gap-2 text-xs font-semibold text-muted transition hover:text-text"><ArrowLeft size={14} /> Back to the drops</Link>

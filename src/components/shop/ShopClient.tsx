@@ -42,7 +42,7 @@ export default function ShopClient({ products, initialSaved = false }: { product
 
   return (
     <main
-      className="grid-bg relative min-h-screen overflow-hidden pb-28"
+      className="relative min-h-screen overflow-hidden pb-28"
       onPointerMove={e => { const el = spot.current; if (el) { el.style.setProperty("--mx", `${e.clientX}px`); el.style.setProperty("--my", `${e.clientY}px`); } }}
     >
       {/* cursor spotlight */}

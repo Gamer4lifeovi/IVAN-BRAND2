@@ -118,7 +118,7 @@ function Studio() {
 
 export default function CustomStudio() {
   return (
-    <main className="grid-bg min-h-screen">
+    <main className="min-h-screen">
       <Navbar />
       <section className="mx-auto max-w-4xl px-5 py-16 md:py-24">
         <p className="text-[11px] font-black uppercase tracking-[.3em] text-accent-text">Make it yours / 1 of 1</p>

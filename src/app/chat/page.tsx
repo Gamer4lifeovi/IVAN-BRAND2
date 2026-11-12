@@ -5,7 +5,7 @@ export const metadata = { title: "Chat with IVAN" };
 
 export default function ChatPage() {
   return (
-    <main className="grid-bg min-h-screen">
+    <main className="min-h-screen">
       <Navbar />
       <section className="relative mx-auto flex max-w-3xl flex-col items-center px-4 pb-10 pt-10">
         <div className="pointer-events-none absolute top-10 h-72 w-72 rounded-full bg-accent/15 blur-[120px]" />

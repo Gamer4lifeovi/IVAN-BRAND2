@@ -20,12 +20,12 @@ export default function HeroVideo() {
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" className="rounded-full border border-white/30 p-3 transition hover:border-[#00ff85] hover:text-[#00ff85]"><Instagram size={17}/></a>
       </header>
       <section className="relative z-10 flex min-h-[76svh] flex-col items-center justify-center px-5 text-center">
-        <motion.h1 initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }} className="display-font max-w-5xl text-[clamp(4.5rem,15vw,12rem)] leading-[.76]">
-          NOT MADE<br/><span className="text-[#00ff85]">TO FIT IN.</span>
+        <motion.h1 initial={{ y: 25 }} animate={{ y: 0 }} transition={{ duration: .7 }} className="display-font max-w-5xl text-[clamp(4.5rem,15vw,12rem)] leading-[.76]">
+          NOT MADE<br/><span className="text-accent">TO FIT IN.</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .65 }} className="mt-8 max-w-sm text-xs leading-6 text-white/65 md:text-sm">Custom art. Street culture. Individual expression.<br/>Wear your own kind of different.</motion.p>
         <motion.div initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: .8 }} className="mt-10">
-          <Link href="/shop" className="group inline-flex items-center gap-5 border border-[#00ff85] bg-[#00ff85] px-7 py-4 text-xs font-black tracking-[.2em] text-[#09090d] transition hover:-rotate-1 hover:bg-[#f4f4f6]">
+          <Link href="/shop" className="group inline-flex items-center gap-5 border border-accent bg-accent px-7 py-4 text-xs font-black tracking-[.2em] text-accent-ink transition hover:-rotate-1 hover:bg-accent/90">
             SHOP NOW <ArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" size={18}/>
           </Link>
         </motion.div>

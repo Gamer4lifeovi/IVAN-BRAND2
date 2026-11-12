@@ -12,7 +12,7 @@ export default function BagPage() {
   const empty = hydrated && items.length === 0;
 
   return (
-    <main className="grid-bg min-h-screen pb-20">
+    <main className="min-h-screen pb-20">
       <Navbar />
       <section className="mx-auto max-w-5xl px-5 pt-12 md:px-8 md:pt-16">
         <p className="text-[11px] font-bold uppercase tracking-[.3em] text-accent-text">Almost yours</p>

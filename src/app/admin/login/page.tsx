@@ -39,7 +39,7 @@ export default function AdminLogin() {
   }
 
   return (
-    <main className="grid-bg relative flex min-h-screen items-center justify-center p-6">
+    <main className="relative flex min-h-screen items-center justify-center p-6">
       <div className="absolute right-4 top-4"><ThemeToggle /></div>
       <div className="glass glow-accent w-full max-w-sm rounded-[28px] p-7">
         <BrandLogo className="mb-4 w-14" />

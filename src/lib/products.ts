@@ -13,12 +13,12 @@ export const gradient = (colors: string[]) => {
 
 /** Handy presets for the admin colour picker (brand-friendly gradients). */
 export const colorPresets: { name: string; colors: string[] }[] = [
-  { name: "Fire", colors: ["#ff0055", "#ff8a00", "#1a0b22"] },
-  { name: "Acid", colors: ["#00ff85", "#d5ff00", "#0b1f18"] },
-  { name: "Riot", colors: ["#b7a4ff", "#ff0055", "#150b26"] },
-  { name: "Mono", colors: ["#f4f4f6", "#00ff85", "#0b1f18"] },
-  { name: "Tag", colors: ["#ff0055", "#7c3aed", "#120a24"] },
-  { name: "Sea", colors: ["#00aaff", "#00ff85", "#071a22"] },
+  { name: "Brick", colors: ["#8f2a30", "#5c1a1f", "#150c0d"] },
+  { name: "Wine", colors: ["#7a2328", "#3b1316", "#0d0909"] },
+  { name: "Rust", colors: ["#8f3a40", "#4a2428", "#120d0e"] },
+  { name: "Ash", colors: ["#c9c4c0", "#6b3a3d", "#161212"] },
+  { name: "Smoke", colors: ["#6b2a31", "#3a1d20", "#121010"] },
+  { name: "Night", colors: ["#5a1f24", "#2a1517", "#0c0909"] },
 ];
 
 /** Only used when Supabase env vars are missing (local demo without a backend). */
