@@ -18,10 +18,10 @@ const nav = [
   { href: "/admin/inbox", label: "Messages" },
 ];
 const kindMeta = {
-  order: { tone: "blue", dot: "bg-sky-400" },
+  order: { tone: "blue", dot: "bg-text" },
   payment: { tone: "green", dot: "bg-accent" },
   chat: { tone: "pink", dot: "bg-hot" },
-  custom: { tone: "pink", dot: "bg-violet-400" },
+  custom: { tone: "pink", dot: "bg-amber-400" },
 } as const;
 
 const ago = (ts: number) => {

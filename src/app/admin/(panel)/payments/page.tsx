@@ -19,7 +19,7 @@ export default function PaymentsPage() {
 
       <section className={`${card} grid divide-y divide-line sm:grid-cols-3 sm:divide-x sm:divide-y-0`}>
         <div className="p-5"><p className="text-3xl font-semibold">{money(total)}</p><p className="mt-1 text-sm font-semibold text-accent-text">Total received</p></div>
-        <div className="p-5"><p className="text-3xl font-semibold">{received.length}</p><p className="mt-1 text-sm font-semibold text-sky-400">Successful payments · avg {money(average)}</p></div>
+        <div className="p-5"><p className="text-3xl font-semibold">{received.length}</p><p className="mt-1 text-sm font-semibold text-text">Successful payments · avg {money(average)}</p></div>
         <div className="p-5"><p className="text-3xl font-semibold">{money(waitingTotal)}</p><p className="mt-1 text-sm font-semibold text-amber-500">Awaiting payment · {waiting.length} order(s)</p></div>
       </section>
 

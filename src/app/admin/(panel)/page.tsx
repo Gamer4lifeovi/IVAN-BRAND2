@@ -69,8 +69,8 @@ export default function Dashboard() {
 
       <section className={`${card} grid divide-y divide-line sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x`}>
         <Stat label="Revenue" value={money(m.revenue)} sub={`Today ${money(m.todayRev)}`} color="var(--accent-text)" data={m.spark.rev} />
-        <Stat label="Orders" value={String(orders.length)} sub={`Today +${m.todayOrders}`} color="#38bdf8" data={m.spark.cnt} />
-        <Stat label="Paid orders" value={String(m.paidCount)} sub={`${conversion}% conversion`} color="#a78bfa" data={m.spark.paid} />
+        <Stat label="Orders" value={String(orders.length)} sub={`Today +${m.todayOrders}`} color="var(--text)" data={m.spark.cnt} />
+        <Stat label="Paid orders" value={String(m.paidCount)} sub={`${conversion}% conversion`} color="var(--hot)" data={m.spark.paid} />
         <Stat label="Conversations" value={String(threads.length)} sub={`${m.customerMsgs} customer message${m.customerMsgs === 1 ? "" : "s"}`} color="var(--hot)" data={m.spark.msg} />
       </section>
 
@@ -85,10 +85,10 @@ export default function Dashboard() {
           <div className="mt-5 flex flex-wrap items-end gap-x-10 gap-y-3">
             <div><p className="text-sm text-muted">Total orders</p><p className="text-2xl font-semibold">{rangeOrders}</p></div>
             <div><p className="text-sm text-muted">Total revenue</p><p className="text-2xl font-semibold">{money(rangeRevenue)}</p></div>
-            <div className="ml-auto flex gap-4 text-xs text-muted"><span className="flex items-center gap-1.5"><i className="h-0.5 w-4 bg-accent" />Revenue</span><span className="flex items-center gap-1.5"><i className="h-0.5 w-4 bg-hot" />Orders (scaled)</span></div>
+            <div className="ml-auto flex gap-4 text-xs text-muted"><span className="flex items-center gap-1.5"><i className="h-0.5 w-4 bg-accent" />Revenue</span><span className="flex items-center gap-1.5"><i className="h-0.5 w-4 bg-text" />Orders (scaled)</span></div>
           </div>
           <div className="mt-4">
-            <AreaChart labels={m.chart.labels} format={n => (n >= 1000 ? `${Math.round(n / 1000)}k` : String(n))} series={[{ name: "Revenue", color: "var(--accent-text)", data: m.chart.rev }, { name: "Orders", color: "var(--hot)", data: m.chart.cnt, scaleToFirst: true }]} />
+            <AreaChart labels={m.chart.labels} format={n => (n >= 1000 ? `${Math.round(n / 1000)}k` : String(n))} series={[{ name: "Revenue", color: "var(--accent-text)", data: m.chart.rev }, { name: "Orders", color: "var(--text)", data: m.chart.cnt, scaleToFirst: true }]} />
           </div>
         </div>
         <div className={`${card} p-6`}>

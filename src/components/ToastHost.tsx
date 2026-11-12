@@ -7,9 +7,9 @@ import { useToasts } from "@/lib/toast";
 const tones = {
   green: "border-accent/50 shadow-[0_0_40px_-12px_var(--glow)]",
   pink: "border-hot/50 shadow-[0_0_40px_-12px_var(--hot)]",
-  blue: "border-sky-400/60 shadow-[0_0_40px_-12px_#38bdf8]",
+  blue: "border-text/30 shadow-[0_0_30px_-14px_var(--text)]",
 } as const;
-const dots = { green: "bg-accent text-accent-ink", pink: "bg-hot text-white", blue: "bg-sky-400 text-black" } as const;
+const dots = { green: "bg-accent text-accent-ink", pink: "bg-hot text-white", blue: "bg-text text-bg" } as const;
 
 export default function ToastHost() {
   const { toasts, dismiss } = useToasts();
