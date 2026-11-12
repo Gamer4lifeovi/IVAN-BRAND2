@@ -18,7 +18,10 @@ const themeScript = `(function(){try{var t=localStorage.getItem('ivan-theme');do
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${space.variable} ${inter.variable}`} suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
+      <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>{children}<ChatWidget /><ToastHost /></body>
     </html>
   );
