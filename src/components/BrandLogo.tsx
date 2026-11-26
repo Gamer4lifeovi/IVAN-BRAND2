@@ -6,16 +6,11 @@ export default function BrandLogo({ variant = "art", onDark = false, href = "/",
   const artwork = variant === "wordmark" ? (
     <span className={`display-font tracking-[-.08em] font-black text-3xl ${className}`}>IVAN<span className="text-hot">®</span></span>
   ) : (
-    <span role="img" aria-label="IVAN animated white and red airbrush logo" className={`ivan-airbrush-logo ${className}`}>
-      {onDark ? (
-        <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art" />
-      ) : (
-        <>
-          <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--dark" />
-          <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--light" />
-        </>
-      )}
+    <span role="img" aria-label="IVAN logo with animated white-to-red airbrush paint pass" className={`ivan-airbrush-logo ${onDark ? "ivan-airbrush-logo--dark" : ""} ${className}`}>
+      <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--base" />
+      <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--red" />
       <span className="ivan-airbrush-logo__spray" />
+      <span className="ivan-airbrush-logo__gun" />
     </span>
   );
   if (href === null) return artwork;

@@ -144,3 +144,121 @@ button { cursor: pointer; }
   animation: none !important;
   filter: invert(1);
 }
+
+/* Larger IVAN logo with a visible airbrush gun and a continuous white-to-red paint pass. */
+.ivan-airbrush-logo {
+  position: relative;
+  display: inline-block;
+  width: clamp(132px, 15vw, 190px);
+  aspect-ratio: 300 / 175;
+  overflow: visible;
+  isolation: isolate;
+  vertical-align: middle;
+}
+.ivan-airbrush-logo__art {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.ivan-airbrush-logo__art--base {
+  z-index: 0;
+  filter: brightness(0) invert(1);
+}
+.ivan-airbrush-logo__art--red {
+  z-index: 1;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(90%) saturate(5140%) hue-rotate(338deg) brightness(94%) contrast(106%);
+  clip-path: inset(0 100% 0 0);
+  animation: ivan-red-shift 4.8s cubic-bezier(.65,0,.35,1) infinite;
+}
+.ivan-airbrush-logo:not(.ivan-airbrush-logo--dark) .ivan-airbrush-logo__art--base {
+  filter: brightness(0);
+}
+.ivan-airbrush-logo__spray {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: -36%;
+  width: 60%;
+  height: 36%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(255,255,255,1) 0 5%, rgba(255,255,255,.9) 10%, rgba(255,255,255,.38) 25%, transparent 58%),
+    radial-gradient(ellipse at 68% 50%, rgba(235,20,48,.98) 0 5%, rgba(235,20,48,.65) 22%, rgba(235,20,48,.22) 48%, transparent 72%);
+  filter: blur(4px);
+  animation: ivan-spray-travel 4.8s cubic-bezier(.65,0,.35,1) infinite;
+  pointer-events: none;
+}
+.ivan-airbrush-logo__spray::after {
+  content: "";
+  position: absolute;
+  inset: 8% -8%;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,1) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(239,25,54,.98) 0 1.5px, transparent 2.5px);
+  background-size: 11px 13px, 17px 19px;
+  opacity: .95;
+}
+.ivan-airbrush-logo__gun {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: -22%;
+  width: 23%;
+  height: 12%;
+  transform: translateY(-50%) rotate(-8deg);
+  border-radius: 8px 5px 5px 8px;
+  border: 2px solid #bfc2c7;
+  background: linear-gradient(180deg, #f8fafc, #7c828b 48%, #e8eaed 52%, #555b64);
+  box-shadow: 0 2px 8px #0009, 0 0 7px #fff8;
+  animation: ivan-gun-travel 4.8s cubic-bezier(.65,0,.35,1) infinite;
+  pointer-events: none;
+}
+.ivan-airbrush-logo__gun::before {
+  content: "";
+  position: absolute;
+  width: 48%;
+  height: 100%;
+  right: -38%;
+  top: 0;
+  border-radius: 2px 8px 8px 2px;
+  background: linear-gradient(180deg, #f7f7f7, #777d86 50%, #d9dce0);
+  border: 1px solid #aeb3ba;
+}
+.ivan-airbrush-logo__gun::after {
+  content: "";
+  position: absolute;
+  width: 34%;
+  height: 95%;
+  left: 20%;
+  top: 75%;
+  transform: skew(-18deg);
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(90deg, #737982, #f2f3f4, #666d76);
+  border: 1px solid #aeb3ba;
+}
+@keyframes ivan-red-shift {
+  0%, 8% { clip-path: inset(0 100% 0 0); }
+  78%, 90% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
+@keyframes ivan-spray-travel {
+  0%, 5% { left: -36%; opacity: 0; }
+  12% { opacity: 1; }
+  82% { left: 112%; opacity: 1; }
+  91%, 100% { left: 112%; opacity: 0; }
+}
+@keyframes ivan-gun-travel {
+  0%, 5% { left: -22%; opacity: 0; }
+  12% { opacity: 1; }
+  82% { left: 126%; opacity: 1; }
+  91%, 100% { left: 126%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ivan-airbrush-logo__art--red { animation: none; clip-path: inset(0 0 0 0); }
+  .ivan-airbrush-logo__spray, .ivan-airbrush-logo__gun { animation: none; display: none; }
+}
