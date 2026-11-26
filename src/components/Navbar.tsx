@@ -26,8 +26,8 @@ export default function Navbar() {
               <Link key={l.href} href={l.href} className={`transition hover:text-accent-text ${pathname.startsWith(l.href) ? "text-accent-text" : "text-muted"}`}>{l.label}</Link>
             ))}
           </nav>
-          <div className="justify-self-center">
-            <BrandLogo className="w-[66px] md:w-[78px]" />
+          <div className="relative z-10 justify-self-center translate-y-1 overflow-visible">
+            <BrandLogo />
           </div>
           <div className="flex items-center justify-self-end">
             <Link href="/shop?saved=1" aria-label="Saved pieces" className="relative hidden rounded-full p-2.5 text-muted transition hover:bg-surface-2 hover:text-hot sm:block">
