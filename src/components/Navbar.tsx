@@ -20,14 +20,16 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-40 h-[112px] border-b border-line bg-bg/75 text-text backdrop-blur-xl">
-        <div className="flex h-full w-full items-center justify-between px-6 py-4 md:px-12">
-          <BrandLogo className="w-[72px]" />
-          <nav className="hidden items-center gap-8 text-[11px] font-bold uppercase tracking-[.18em] md:flex">
+        <div className="mx-auto grid h-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-4 md:px-12">
+          <nav className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[.14em] md:gap-8 md:text-[11px] md:tracking-[.18em]">
             {links.map(l => (
               <Link key={l.href} href={l.href} className={`transition hover:text-accent-text ${pathname.startsWith(l.href) ? "text-accent-text" : "text-muted"}`}>{l.label}</Link>
             ))}
           </nav>
-          <div className="flex items-center">
+          <div className="justify-self-center">
+            <BrandLogo className="w-[66px] md:w-[78px]" />
+          </div>
+          <div className="flex items-center justify-self-end">
             <Link href="/shop?saved=1" aria-label="Saved pieces" className="relative hidden rounded-full p-2.5 text-muted transition hover:bg-surface-2 hover:text-hot sm:block">
               <Heart size={19} />
               {hydrated && saved > 0 && <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-surface-2 px-1 text-[9px] font-bold">{saved}</span>}
