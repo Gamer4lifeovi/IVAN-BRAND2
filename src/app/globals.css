@@ -78,7 +78,7 @@ button { cursor: pointer; }
 .ivan-airbrush-logo {
   position: relative;
   display: inline-block;
-  width: 112px;
+  width: 132px;
   aspect-ratio: 1146 / 655;
   overflow: visible;
   vertical-align: middle;
@@ -91,5 +91,5 @@ button { cursor: pointer; }
   overflow: visible;
 }
 @media (max-width: 640px) {
-  .ivan-airbrush-logo { width: 94px; }
+  .ivan-airbrush-logo { width: 108px; }
 }

@@ -26,7 +26,7 @@ export default function Navbar() {
               <Link key={l.href} href={l.href} className={`transition hover:text-accent-text ${pathname.startsWith(l.href) ? "text-accent-text" : "text-muted"}`}>{l.label}</Link>
             ))}
           </nav>
-          <div className="relative z-10 justify-self-center translate-y-1 overflow-visible">
+          <div className="relative z-10 flex h-full items-end justify-self-center overflow-visible">
             <BrandLogo />
           </div>
           <div className="flex items-center justify-self-end">
