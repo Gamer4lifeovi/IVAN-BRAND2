@@ -12,7 +12,7 @@ export default function BrandLogo({ variant = "art", onDark = false, href = "/",
       ) : (
         <>
           <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--dark" />
-          <img src="/images/ivan-logo.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--light" />
+          <img src="/images/ivan-logo-light.png" alt="" className="ivan-airbrush-logo__art ivan-airbrush-logo__art--light" />
         </>
       )}
       <span className="ivan-airbrush-logo__spray" />

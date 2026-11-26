@@ -79,7 +79,7 @@ button { cursor: pointer; }
   position: relative;
   display: inline-block;
   width: 100px;
-  aspect-ratio: 633 / 711;
+  aspect-ratio: 300 / 175;
   overflow: hidden;
   isolation: isolate;
   vertical-align: middle;
@@ -136,4 +136,11 @@ button { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   .ivan-airbrush-logo__art, .ivan-airbrush-logo__spray { animation: none; }
   .ivan-airbrush-logo__art { filter: brightness(0) saturate(100%) invert(17%) sepia(90%) saturate(5140%) hue-rotate(338deg) brightness(94%) contrast(106%); }
+}
+
+/* The new uploaded artwork has a transparent background and a wide 300:175 ratio. */
+.ivan-airbrush-logo { aspect-ratio: 300 / 175; }
+.ivan-airbrush-logo__art--light {
+  animation: none !important;
+  filter: invert(1);
 }
