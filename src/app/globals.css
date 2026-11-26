@@ -212,9 +212,9 @@ button { cursor: pointer; }
   height: 12%;
   transform: translateY(-50%) rotate(-8deg);
   border-radius: 8px 5px 5px 8px;
-  border: 2px solid #bfc2c7;
-  background: linear-gradient(180deg, #f8fafc, #7c828b 48%, #e8eaed 52%, #555b64);
-  box-shadow: 0 2px 8px #0009, 0 0 7px #fff8;
+  border: 2px solid #fff;
+  background: #fff;
+  box-shadow: 0 0 8px #fff;
   animation: ivan-gun-travel 4.8s cubic-bezier(.65,0,.35,1) infinite;
   pointer-events: none;
 }
@@ -226,8 +226,8 @@ button { cursor: pointer; }
   right: -38%;
   top: 0;
   border-radius: 2px 8px 8px 2px;
-  background: linear-gradient(180deg, #f7f7f7, #777d86 50%, #d9dce0);
-  border: 1px solid #aeb3ba;
+  background: #fff;
+  border: 1px solid #fff;
 }
 .ivan-airbrush-logo__gun::after {
   content: "";
@@ -238,8 +238,8 @@ button { cursor: pointer; }
   top: 75%;
   transform: skew(-18deg);
   border-radius: 0 0 5px 5px;
-  background: linear-gradient(90deg, #737982, #f2f3f4, #666d76);
-  border: 1px solid #aeb3ba;
+  background: #fff;
+  border: 1px solid #fff;
 }
 @keyframes ivan-red-shift {
   0%, 8% { clip-path: inset(0 100% 0 0); }
